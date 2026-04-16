@@ -1,3 +1,5 @@
+import TestContent from "./components/TestContent";
+
 export default function Home() {
   return (
     <div>
@@ -5,6 +7,14 @@ export default function Home() {
         <h1>Yin Chu</h1>
         <h2>My website :D</h2>
         <h3>To be continued...</h3>
+        <TestContent />
+        <TestContent />
+        <TestContent />
+        <TestContent />
+        <TestContent />
+        <TestContent />
+        <TestContent />
+        <TestContent />
       </main>
     </div>
   );
