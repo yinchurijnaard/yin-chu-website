@@ -26,16 +26,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    // Changing the background colour for the <html> tag actually set the background colour for the whole page, makes sense...
     <html
       lang="en"
+      className="bg-black"
       // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       {/* So the reason why: body is for the whole 'body'. The {children}'s background is only affected in page.tsx (the main page???) */}
       {/* And the reason why the NavbarDesktop bg is the same as below (<body className="bg-amber-400"></body> is because I haven't specified a background colour) */}
-      <body className="min-h-full flex flex-col bg-amber-400">
+      <body className="min-h-full flex flex-col">
         <Navbar />
-        {/* Find out why the text is offset to the right, compared to the Navbar and the Footer */}
-        <div className="flex-grow container mx-auto">{children}</div>
+        {/* Find out why the text is offset to the right, compared to the Navbar and the Footer --> the removed Tailwind CSS classes from the line below seemed to have caused this issue? */}
+        <div className="">{children}</div>
         <Footer />
       </body>
     </html>

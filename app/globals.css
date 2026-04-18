@@ -3,7 +3,7 @@
 
 @layer base {
   body {
-    @apply bg-sky-100;
+    /* @apply bg-sky-200; */
   }
 }
 

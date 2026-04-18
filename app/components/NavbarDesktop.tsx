@@ -1,17 +1,16 @@
 import Link from "next/link";
-import React from "react";
 
 const NavbarDesktop = () => {
   return (
-    <nav className="text-black">
+    <nav className="border hidden sm:flex w-full text-center text-2xl p-4 justify-around">
       {/* Render each Link component or hardcode it? */}
-      <Link href="/" className="border-2">
+      <Link href="/" className="">
         Home
       </Link>
-      <Link href="/about" className="border-2">
+      <Link href="/about" className="">
         About
       </Link>
-      <Link href="/contact" className="border-2">
+      <Link href="/contact" className="">
         Contact
       </Link>
     </nav>

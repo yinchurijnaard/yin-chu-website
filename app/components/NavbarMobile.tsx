@@ -1,18 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import Hamburger from "hamburger-react";
 import NavbarMobileMenu from "./NavbarMobileMenu";
+
+// To Do / Check
+// Close menu when clicking/tapping outside of the menu area
 
 const NavbarMobile = () => {
   const [isOpen, setOpen] = useState(false);
 
-  // Continue building the logic to make the body no-scrollable when the menu is open
-  useEffect(() => {}, [isOpen]);
+  const handleClose = () => setOpen(false);
 
   return (
     // Padding-4!
-    <nav className="bg-sky-200 text-black justify-items-end p-4">
+    <nav className="justify-items-end p-4 sm:hidden">
       <Hamburger toggled={isOpen} toggle={setOpen} />
-      {isOpen && <NavbarMobileMenu />}
+      {isOpen && <NavbarMobileMenu handleClose={handleClose} />}
     </nav>
   );
 };

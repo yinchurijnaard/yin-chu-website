@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-sky-200 text-black w-full p-4">
-      <p>This is the footer</p>
+    <footer className="border border-white w-full p-4 text-center">
+      <p>&copy; This is the footer</p>
     </footer>
   );
 };
