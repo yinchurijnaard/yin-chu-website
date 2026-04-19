@@ -33,10 +33,14 @@ export default function RootLayout({
     >
       {/* So the reason why: body is for the whole 'body'. The {children}'s background is only affected in page.tsx (the main page???) */}
       {/* And the reason why the NavbarDesktop bg is the same as below (<body className="bg-amber-400"></body> is because I haven't specified a background colour) */}
-      <body className="min-h-full flex flex-col">
+      <body className="h-screen flex flex-col">
         <Navbar />
+        {/* Is putting the <hr> here better? */}
+        <hr className="text-gray-700 p-4" />
         {/* Find out why the text is offset to the right, compared to the Navbar and the Footer --> the removed Tailwind CSS classes from the line below seemed to have caused this issue? */}
-        <div className="">{children}</div>
+        <div className="grow">{children}</div>
+        <hr className="text-gray-700 p-4" />
+
         <Footer />
       </body>
     </html>

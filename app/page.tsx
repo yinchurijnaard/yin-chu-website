@@ -4,13 +4,14 @@
 
 export default function Home() {
   return (
-    <main className="p-4 space-y-8 text-center">
-      <h1 className="text-3xl">hallo / hello / grüezi</h1>
+    <main className="p-4 space-y-12 text-center justify-center flex-col">
+      <h1 className="text-3xl italic">hallo / hello / grüezi</h1>
       <h2 className="text-6xl">I&apos;m Yin Chu</h2>
       <h3 className="text-3xl">
         I&apos;m a software engineer from the Netherlands 🇳🇱
         <br />
-        Currently based in Switzerland 🇨🇭
+        <br />
+        Currently based in the Swiss Alps 🇨🇭
       </h3>
     </main>
   );

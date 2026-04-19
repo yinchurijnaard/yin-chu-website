@@ -8,12 +8,18 @@ import Link from "next/link";
 const NavbarDesktop = () => {
   return (
     <>
-      <nav className="hidden sm:flex w-full text-center text-2xl p-4 justify-around">
+      <nav className="hidden sm:flex w-full text-center text-2xl p-4 justify-end space-x-12">
         <Link
           href="/"
           className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
         >
           home
+        </Link>
+        <Link
+          href="/projects"
+          className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
+        >
+          projects
         </Link>
         <Link
           href="/about"
@@ -28,7 +34,7 @@ const NavbarDesktop = () => {
           contact
         </Link>
       </nav>
-      <hr className="text-gray-700 p-4" />
+      {/* <hr className="text-gray-700 p-4" /> */}
     </>
   );
 };
