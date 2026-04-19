@@ -11,3 +11,7 @@
 // Check font sizing and font size consistency!
 
 // AT THE END OF THE WHOLE PROJECT: CHECK ALL FILES FOR ANY LEFTOVER COMMENTS/TO DO'S/CHECKS!!!
+
+// Should I create a separte <hr> component?
+
+// Even when on desktop, if the window is too small and therefore reaches mobile view, links (such as the navbar) should have a hover state, instead of a permanent underline (like it is on mobile)

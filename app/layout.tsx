@@ -29,7 +29,6 @@ export default function RootLayout({
     // Changing the background colour for the <html> tag actually set the background colour for the whole page, makes sense...
     <html
       lang="en"
-      className="bg-black"
       // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       {/* So the reason why: body is for the whole 'body'. The {children}'s background is only affected in page.tsx (the main page???) */}

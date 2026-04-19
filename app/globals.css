@@ -2,10 +2,23 @@
 @plugin "daisyui";
 
 @layer base {
+  html,
   body {
-    /* @apply bg-sky-200; */
+    height: 100%;
+  }
+  /* Basic Styling for Dark Mode (default) */
+  body {
+    @apply bg-gray-950 text-gray-300;
   }
 }
+
+/* Custome Theme */
+/* @theme {
+  --color-gray-bg: #0a0a0a;
+  --color-gray-surface: #111111;
+  --color-gray-elevated-surface: #1a1a1a;
+  --color-gray-borders: #2a2a2a;
+} */
 
 /* :root {
   --background: #ffffff;

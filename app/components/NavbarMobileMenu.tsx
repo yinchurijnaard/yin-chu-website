@@ -16,23 +16,23 @@ const NavbarMobileMenu = ({ handleClose }: HandleCloseProp) => {
       <Link
         href="/"
         onClick={handleClose}
-        className="underline decoration-wavy decoration-pink-400"
+        className="underline decoration-wavy decoration-sky-500"
       >
-        Home
+        home
       </Link>
       <Link
         href="/about"
         onClick={handleClose}
-        className="underline decoration-wavy decoration-pink-400"
+        className="underline decoration-wavy decoration-sky-500"
       >
-        About
+        about
       </Link>
       <Link
         href="/contact"
         onClick={handleClose}
-        className="underline decoration-wavy decoration-pink-400"
+        className="underline decoration-wavy decoration-sky-500"
       >
-        Contact
+        contact
       </Link>
     </div>
   );
