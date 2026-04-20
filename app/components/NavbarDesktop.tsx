@@ -1,41 +1,30 @@
 import Link from "next/link";
-
-// To Do / Check
-// Render each Link component or hardcode it?
-// Is it semantically okay to render a React Fragment, then a <nav> tag and afterwards a simple <hr> tag?
-// <hr> tag is visible even in mobile, because it lives outside of the <nav> tag
+import { usePathname } from "next/navigation";
+import { links } from "../constants/navigation";
 
 const NavbarDesktop = () => {
+  const pathname = usePathname();
+
   return (
-    <>
-      <nav className="hidden sm:flex w-full text-center text-2xl p-4 justify-end space-x-12">
-        <Link
-          href="/"
-          className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
-        >
-          home
-        </Link>
-        <Link
-          href="/projects"
-          className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
-        >
-          projects
-        </Link>
-        <Link
-          href="/about"
-          className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
-        >
-          about
-        </Link>
-        <Link
-          href="/contact"
-          className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
-        >
-          contact
-        </Link>
-      </nav>
-      {/* <hr className="text-gray-700 p-4" /> */}
-    </>
+    <nav className="hidden sm:flex w-full text-center text-2xl p-4 justify-end space-x-12">
+      {links.map((link) => {
+        const isActive = pathname === link.href;
+
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            className={
+              isActive
+                ? "underline hover:underline hover:decoration-orange-500"
+                : "hover:underline hover:decoration-orange-500"
+            }
+          >
+            {link.name}
+          </Link>
+        );
+      })}
+    </nav>
   );
 };
 

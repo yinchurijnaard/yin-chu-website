@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="w-full p-4 text-center flex justify-center space-x-12">
       <a
-        className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
+        className="hover:underline hover:decoration-orange-500"
         href="https://github.com/yinchurijnaard"
         target="_blank"
         rel="noopener noreferrer"
@@ -14,7 +14,7 @@ const Footer = () => {
         GitHub
       </a>
       <a
-        className="hover:underline hover:decoration-wavy hover:decoration-sky-500"
+        className="hover:underline hover:decoration-orange-500"
         href="https://www.linkedin.com/in/yinchurijnaard/"
         target="_blank"
         rel="noopener noreferrer"

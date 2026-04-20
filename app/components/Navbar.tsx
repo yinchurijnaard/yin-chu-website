@@ -10,10 +10,10 @@ import NavbarDesktop from "./NavbarDesktop";
 
 const Navbar = () => {
   return (
-    <>
+    <header>
       <NavbarMobile />
       <NavbarDesktop />
-    </>
+    </header>
   );
 };
 

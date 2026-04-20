@@ -11,7 +11,6 @@ const NavbarMobile = () => {
   const handleClose = () => setOpen(false);
 
   return (
-    // Padding-4!
     <nav className="justify-items-end p-4 sm:hidden">
       <Hamburger toggled={isOpen} toggle={setOpen} />
       {isOpen && <NavbarMobileMenu handleClose={handleClose} />}

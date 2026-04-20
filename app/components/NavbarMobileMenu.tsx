@@ -1,45 +1,34 @@
 import Link from "next/link";
-
-// To Do / Check
-// Use a <div> or an <ul> to display the navigation links?
-// Render each Link component or hardcode it?
+import { usePathname } from "next/navigation";
+import { links } from "../constants/navigation";
 
 interface HandleCloseProp {
   handleClose: () => void;
 }
 
 const NavbarMobileMenu = ({ handleClose }: HandleCloseProp) => {
+  const pathname = usePathname();
+
   return (
-    // h-screen sets the element to span the entire height of the viewport
-    // Padding-4!
     <div className="h-3/4 w-full text-center text-2xl p-4 justify-around flex">
-      <Link
-        href="/"
-        onClick={handleClose}
-        className="underline decoration-wavy decoration-sky-500"
-      >
-        home
-      </Link>
-      <Link
-        href="/projects"
-        className="underline decoration-wavy decoration-sky-500"
-      >
-        projects
-      </Link>
-      <Link
-        href="/about"
-        onClick={handleClose}
-        className="underline decoration-wavy decoration-sky-500"
-      >
-        about
-      </Link>
-      <Link
-        href="/contact"
-        onClick={handleClose}
-        className="underline decoration-wavy decoration-sky-500"
-      >
-        contact
-      </Link>
+      {links.map((link) => {
+        const isActive = pathname === link.href;
+
+        return (
+          <Link
+            key={link.name}
+            href={link.href}
+            onClick={handleClose}
+            className={
+              isActive
+                ? "underline hover:underline hover:decoration-orange-500"
+                : "hover:underline hover:decoration-orange-500"
+            }
+          >
+            {link.name}
+          </Link>
+        );
+      })}
     </div>
   );
 };

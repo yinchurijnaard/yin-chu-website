@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-// import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import "material-symbols";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import {
+  GeistPixelSquare,
+  GeistPixelGrid,
+  GeistPixelCircle,
+  GeistPixelTriangle,
+  GeistPixelLine,
+} from "geist/font/pixel";
+import { ThemeProvider } from "next-themes";
 import Navbar from "./components/Navbar";
+import MountainBackground from "./components/MountainBackground";
 import Footer from "./components/Footer";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
 
 export const metadata: Metadata = {
   title: "Yin Chu Rijnaard",
@@ -26,22 +25,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // Changing the background colour for the <html> tag actually set the background colour for the whole page, makes sense...
     <html
       lang="en"
-      // className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable}${GeistPixelCircle.variable}${GeistPixelTriangle.variable} ${GeistPixelLine.variable}`}
+      suppressHydrationWarning
     >
-      {/* So the reason why: body is for the whole 'body'. The {children}'s background is only affected in page.tsx (the main page???) */}
-      {/* And the reason why the NavbarDesktop bg is the same as below (<body className="bg-amber-400"></body> is because I haven't specified a background colour) */}
       <body className="h-screen flex flex-col">
-        <Navbar />
-        {/* Is putting the <hr> here better? */}
-        <hr className="text-gray-700 p-4" />
-        {/* Find out why the text is offset to the right, compared to the Navbar and the Footer --> the removed Tailwind CSS classes from the line below seemed to have caused this issue? */}
-        <div className="grow">{children}</div>
-        <hr className="text-gray-700 p-4" />
+        <ThemeProvider
+          attribute="data-theme"
+          defaultTheme="system"
+          enableSystem={true}
+        >
+          <Navbar />
+          <hr className="border-main-border p-4" />
 
-        <Footer />
+          <div className="grow">{children}</div>
+
+          <MountainBackground />
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
