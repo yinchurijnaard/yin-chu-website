@@ -13,7 +13,7 @@ const MountainBackground = () => {
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="text-third-text"
+        className="bg-main-bg text-third-text"
       />
     </svg>
   );

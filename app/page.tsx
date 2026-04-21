@@ -6,7 +6,7 @@ import { TypeAnimation } from "react-type-animation";
 export default function Home() {
   return (
     // Refactor to use gap instead of space-y-x
-    <main className="p-8 space-y-16 text-center flex flex-col h-full">
+    <main className="p-8 space-y-16 text-center flex flex-col">
       <div className="space-y-4">
         <p className="text-2xl italic text-sec-text">
           Hallo / hello / grüezi, I&apos;m

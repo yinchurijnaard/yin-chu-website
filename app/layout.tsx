@@ -28,10 +28,10 @@ export default function RootLayout({
     <html
       lang="en"
       style={{ scrollbarGutter: "stable" }}
-      className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable}${GeistPixelCircle.variable}${GeistPixelTriangle.variable} ${GeistPixelLine.variable}`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable}${GeistPixelCircle.variable}${GeistPixelTriangle.variable} ${GeistPixelLine.variable} bg-main-bg`}
       suppressHydrationWarning
     >
-      <body className="h–full flex flex-col">
+      <body className="min-h-screen flex flex-col overflow-x-hidden">
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"
@@ -40,10 +40,12 @@ export default function RootLayout({
           <Navbar />
           <hr className="border-main-border p-4" />
 
-          <div className="grow flex flex-col relative">{children}</div>
+          <div className="grow flex flex-col">{children}</div>
 
-          <MountainBackground />
-          <Footer />
+          <div className="relative">
+            <MountainBackground />
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
