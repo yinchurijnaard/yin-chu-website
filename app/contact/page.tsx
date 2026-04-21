@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-4 m-4 space-y-8 sm:space-y-0 sm:space-x-16 sm:p-8 sm:m-8 sm:flex justify-between h-full">
+    <div className="p-8 space-y-8 sm:space-y-0 sm:space-x-16 sm:p-8 sm:m-8 flex flex-col sm:flex-row justify-between min-h-full items-center">
       {/* Hero section */}
       <div className="space-y-4 sm:w-1/2">
         <PageTitle title={"Get in touch with me!"} />
