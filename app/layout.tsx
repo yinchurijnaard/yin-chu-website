@@ -27,6 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      style={{ scrollbarGutter: "stable" }}
       className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable}${GeistPixelCircle.variable}${GeistPixelTriangle.variable} ${GeistPixelLine.variable}`}
       suppressHydrationWarning
     >
