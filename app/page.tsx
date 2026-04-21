@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="p-4 m-4 space-y-16 text-center justify-center flex-col h-screen">
+    <main className="p-8 space-y-16 text-center flex flex-col h-full">
       <div className="space-y-4">
         <p className="text-2xl italic text-sec-text">
           Hallo / hello / grüezi, I&apos;m
@@ -13,7 +13,7 @@ export default function Home() {
         <TypeAnimation
           sequence={["Yin Chu"]}
           speed={5}
-          className="text-8xl font-pixel-line text-orange-500"
+          className="text-6xl sm:text-8xl font-pixel-line text-orange-500"
         />
       </div>
 

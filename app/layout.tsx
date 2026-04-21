@@ -39,7 +39,7 @@ export default function RootLayout({
           <Navbar />
           <hr className="border-main-border p-4" />
 
-          <div className="grow">{children}</div>
+          <div className="grow flex flex-col relative">{children}</div>
 
           <MountainBackground />
           <Footer />
