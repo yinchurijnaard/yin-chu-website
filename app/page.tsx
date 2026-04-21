@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="p-4 space-y-16 text-center justify-center flex-col">
+    <main className="p-4 m-4 space-y-16 text-center justify-center flex-col">
       <div className="space-y-4">
         <p className="text-2xl italic text-sec-text">
           Hallo / hello / grüezi, I&apos;m
@@ -22,6 +23,15 @@ export default function Home() {
       </div>
 
       <p className="text-lg text-sec-text">Based in the Swiss Alps 🇨🇭</p>
+
+      <div className="text-lg text-sec-text space-y-4">
+        <p>Let&apos;s get a &#40;digital&#41; cuppa ☕️</p>
+        <Link href="/contact">
+          <button className="btn btn-outline text-orange-500 text-lg">
+            Get in touch!
+          </button>
+        </Link>
+      </div>
     </main>
   );
 }

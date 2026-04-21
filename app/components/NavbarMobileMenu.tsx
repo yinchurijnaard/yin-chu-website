@@ -10,7 +10,7 @@ const NavbarMobileMenu = ({ handleClose }: HandleCloseProp) => {
   const pathname = usePathname();
 
   return (
-    <div className="h-3/4 w-full text-center text-2xl p-4 justify-around flex">
+    <div className="h-3/4 w-full text-center text-2xl p-4 flex flex-col space-y-4">
       {links.map((link) => {
         const isActive = pathname === link.href;
 
