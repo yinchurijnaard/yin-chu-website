@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className="p-4 m-4 space-y-16 text-center justify-center flex-col">
+    <main className="p-4 m-4 space-y-16 text-center justify-center flex-col h-screen">
       <div className="space-y-4">
         <p className="text-2xl italic text-sec-text">
           Hallo / hello / grüezi, I&apos;m
