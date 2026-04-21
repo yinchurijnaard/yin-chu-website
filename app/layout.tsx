@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable}${GeistPixelCircle.variable}${GeistPixelTriangle.variable} ${GeistPixelLine.variable}`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="h–full flex flex-col">
         <ThemeProvider
           attribute="data-theme"
           defaultTheme="system"
