@@ -38,11 +38,10 @@ export default function RootLayout({
           enableSystem={true}
         >
           <Navbar />
-          <hr className="border-main-border p-4" />
-
           <div className="grow flex flex-col">{children}</div>
 
-          <div className="relative">
+          {/* Why do I need a div to actually show the MountainBackground??? */}
+          <div>
             <MountainBackground />
             <Footer />
           </div>

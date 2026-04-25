@@ -9,6 +9,7 @@
   --color-sec-text: #d5d5d5;
   --color-third-text: #2a2a2a;
   --color-main-border: #2a2a2a;
+  --color-card-bg: #d5d5d5;
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -21,7 +22,6 @@
 
 @variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
-/* Find a better way to do this, such that I don't need to duplicate code. Like below: */
 @media (prefers-color-scheme: light) {
   :root {
     --color-main-bg: #eeeeee;
@@ -29,6 +29,7 @@
     --color-sec-text: #2a2a2a;
     --color-third-text: #d5d5d5;
     --color-main-border: #d5d5d5;
+    --color-card-bg: #2a2a2a;
   }
 }
 
@@ -38,6 +39,7 @@
   --color-sec-text: #2a2a2a;
   --color-third-text: #d5d5d5;
   --color-main-border: #d5d5d5;
+  --color-card-bg: #2a2a2a;
 }
 
 @layer base {
@@ -46,6 +48,6 @@
     height: 100%;
   }
   body {
-    @apply bg-main-bg text-main-text border-main-border font-mono;
+    @apply bg-main-bg text-main-text font-mono;
   }
 }

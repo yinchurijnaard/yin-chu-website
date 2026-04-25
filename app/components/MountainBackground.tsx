@@ -4,7 +4,7 @@ const MountainBackground = () => {
       viewBox="0 0 1000 200"
       fill="none"
       xmlns="http://w3.org"
-      className="w-full h-auto"
+      className="w-full h-48"
       preserveAspectRatio="none"
     >
       <path

@@ -35,67 +35,62 @@ const Contact = () => {
   };
 
   return (
-    // <div className="p-8 space-y-8 sm:space-y-0 sm:space-x-16 sm:p-8 sm:m-8 flex flex-col sm:flex-row justify-between items-center">
-    <div className="p-8 space-y-8 sm:space-y-0 sm:space-x-16 sm:p-8 sm:m-8 flex flex-col sm:flex-row justify-between items-center min-h-full">
-      {/* Hero section */}
-      <div className="space-y-4 sm:w-1/2">
+    <main className="min-h-full flex flex-col sm:flex-row sm:justify-between sm:items-center gap-12 mx-4 sm:mx-8">
+      {/* DIV 1 */}
+      {/* HERO SECTION */}
+      <div className="flex flex-col gap-2 sm:w-1/2">
         <PageTitle title={"Get in touch with me!"} />
-        <h2 className="sm:text-2xl text-main-text">
+        <h2 className="sm:text-2xl">
           Fill out the contact form, and I&apos;ll get back to you as soon as
           possible!
         </h2>
       </div>
 
-      {/* Divider section (from daisyUI)*/}
+      {/* DIV 2 */}
+      {/* DIVIDER */}
       <div className="divider sm:hidden"></div>
 
-      {/* Contact form */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center">
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="space-y-4 w-full max-w-md mx-auto"
-        >
-          {/* First name input */}
-          <fieldset className="fieldset w-full">
-            <legend className="fieldset-legend text-main-text text-base">
-              First name
-            </legend>
+      {/* DIV 3 */}
+      {/* CONTACT FORM */}
+      <div className="w-full sm:w-1/2">
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-2">
+          {/* FIRST NAME */}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend sm:text-base">First name</legend>
             <input
               id="firstName"
               {...register("firstName")}
-              className="p-4 input text-main-text text-base"
+              className="w-full input sm:text-base"
             />
             {renderError("firstName")}
           </fieldset>
 
-          {/* Last name input field*/}
-          <fieldset className="fieldset w-full">
-            <legend className="fieldset-legend text-main-text text-base">
-              Last name
-            </legend>
+          {/* LAST NAME*/}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend sm:text-base">Last name</legend>
             <input
               id="lastName"
               {...register("lastName")}
-              className="p-4 input text-main-text text-base"
+              className="w-full input sm:text-base"
             />
             {renderError("lastName")}
           </fieldset>
 
-          {/* Message input field */}
-          <fieldset className="fieldset w-full">
-            <legend className="fieldset-legend text-main-text text-base">
+          {/* MESSAGE */}
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend sm:text-base">
               Your message
             </legend>
             <textarea
               id="message"
               {...register("message")}
-              placeholder="Do you like your coffee black or with sugar?"
-              className="p-4 textarea text-main-text text-base"
+              placeholder="How do you like your coffee?"
+              className="w-full p-4 textarea sm:text-base"
             />
             {renderError("message")}
           </fieldset>
 
-          {/* Submit button */}
+          {/* SUBMIT */}
           <button
             type="submit"
             className="btn btn-outline text-orange-500 text-lg w-fit"
@@ -104,7 +99,7 @@ const Contact = () => {
           </button>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 
